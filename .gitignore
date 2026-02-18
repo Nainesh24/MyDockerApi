@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+
+# Docker
+*.dockerignore
+
+# Logs
+*.log
+
+# Environment files
+.env

@@ -59,18 +59,18 @@ namespace MyDockerApi.Controllers
         }
 
         // DELETE: api/product/5
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteProduct(int id)
-        //{
-        //    var product = await _context.Products.FindAsync(id);
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
 
-        //    if (product == null)
-        //        return NotFound();
+            if (product == null)
+                return NotFound();
 
-        //    _context.Products.Remove(product);
-        //    await _context.SaveChangesAsync();
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
 
-        //    return NoContent();
-        //}
+            return NoContent();
+        }
     }
 }

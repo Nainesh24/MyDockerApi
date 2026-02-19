@@ -46,17 +46,17 @@ namespace MyDockerApi.Controllers
         }
 
         // PUT: api/product/5
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> UpdateProduct(int id, Product product)
-        //{
-        //    if (id != product.Id)
-        //        return BadRequest();
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest();
 
-        //    _context.Entry(product).State = EntityState.Modified;
-        //    await _context.SaveChangesAsync();
+            _context.Entry(product).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
-        //    return NoContent();
-        //}
+            return NoContent();
+        }
 
         // DELETE: api/product/5
         [HttpDelete("{id}")]
